@@ -1,0 +1,296 @@
+/* ============================================================
+   CMG Clear Design System — Colors & Typography Tokens
+   Sources: Clear Components Library.fig
+            Clear Design System _ Proof of Concept.fig
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+:root {
+  /* ── PRIMARY BRAND ─────────────────────────────────── */
+  --cmg-green:          #92C13B;
+  --cmg-green-dk:       #76A52B;
+  --cmg-green-forest:   #5C8A1D;
+  --aqua:               #32A4AC;
+  --teal:               #138890;
+  --dk-teal:            #047880;
+  --navy-blue:          #2A343D;
+
+  /* ── SURFACE / ROOT ────────────────────────────────── */
+  --surface-50:         #FFFFFF;
+  --surface-100:        #FCFCFC;
+  --surface-200:        #F7F7F7;
+  --surface-300:        #F4F4F5;
+  --surface-400:        #EDEDED;
+  --surface-500:        #E4E4E4;
+  --surface-600:        #CFCFCF;
+  --surface-700:        #A2A2A2;
+  --surface-800:        #7D7D7D;
+  --surface-900:        #606060;
+
+  /* ── GRAY ──────────────────────────────────────────── */
+  --gray-50:            #E4E4E4;
+  --gray-100:           #C8C8C8;
+  --gray-200:           #A9A8A9; /* Silver Gray — disabled icons */
+  --gray-300:           #888888;
+  --gray-400:           #6C7570;
+  --gray-500:           #4D4D4D; /* CMG Gray */
+  --gray-600:           #464646;
+  --gray-700:           #3B3B3B; /* CMG Dark Gray */
+  --gray-800:           #2A2A2A;
+  --gray-900:           #202020; /* Primary text on light bgs */
+
+  /* ── TEAL SCALE (full) ──────────────────────────────── */
+  --teal-50:            #EAF6F7;
+  --teal-100:           #D1EDEF;
+  --teal-200:           #ADDDE0;
+  --teal-300:           #8BD2D7;
+  --teal-400:           #6BC2C8;
+  --teal-500:           #32A4AC; /* Aqua Blue — brand primary */
+  --teal-600:           #138890; /* Teal Blue */
+  --teal-700:           #047880; /* Dark Teal — primary action */
+  --teal-800:           #186368;
+  --teal-900:           #18474A;
+  /* Legacy aliases */
+  --aqua:               var(--teal-500);
+  --teal:               var(--teal-600);
+  --dk-teal:            var(--teal-700);
+
+  /* ── RED ────────────────────────────────────────────── */
+  --red-50:             #FFF5F5;
+  --red-100:            #FFE0DF;
+  --red-200:            #FFB8B3;
+  --red-300:            #FF867F;
+  --red-400:            #FF5A4E;
+  --red-500:            #EB1000; /* Error buttons/icons */
+  --red-600:            #D60F00; /* Error toast text, invalid stroke */
+  --red-700:            #C00B14; /* Venetian Red — red tag text */
+  --red-800:            #990D03;
+  --red-900:            #630700;
+
+  /* ── GREEN ──────────────────────────────────────────── */
+  --green-50:           #ECFAE8;
+  --green-100:          #C8E8C3;
+  --green-200:          #9BD491;
+  --green-300:          #6FB864;
+  --green-400:          #4B9C3E;
+  --green-500:          #2E8120; /* Success text on white */
+  --green-600:          #1A760B; /* Success toast text */
+  --green-700:          #155D0A; /* Green tag text */
+  --green-800:          #174510;
+  --green-900:          #11340B;
+
+  /* ── BLUE ──────────────────────────────────────────── */
+  --blue-50:            #EFF6FF;
+  --blue-100:           #D0E1FD;
+  --blue-200:           #ABC9FB;
+  --blue-300:           #85B2F9;
+  --blue-400:           #609AF8;
+  --blue-500:           #3B82F6;
+  --blue-600:           #2563EB;
+  --blue-700:           #1D4ED8;
+  --blue-800:           #245098; /* Info message text */
+  --blue-900:           #1E3A5F;
+
+  /* ── YELLOW ─────────────────────────────────────────── */
+  --yellow-50:          #FFFBE5;
+  --yellow-100:         #FEF5B3;
+  --yellow-200:         #FDF08F;
+  --yellow-300:         #FCE95C;
+  --yellow-400:         #FCE53C;
+  --yellow-500:         #FBDE0B;
+  --yellow-600:         #AB9400;
+  --yellow-900:         #8F5F17; /* Warning message text */
+
+  /* ── ORANGE ─────────────────────────────────────────── */
+  --orange-100:         #FFEDD5;
+  --orange-500:         #F97316;
+  --orange-800:         #9A3412; /* Orange tag text */
+
+  /* ── PURPLE ─────────────────────────────────────────── */
+  --purple-100:         #F3E8FF;
+  --purple-500:         #9747FF;
+  --purple-900:         #581C87; /* Purple tag text */
+
+  /* ── NAVY (full) ────────────────────────────────────── */
+  --navy-50:            #E2E4E6;
+  --navy-100:           #CBCED1; /* Prime gray border */
+  --navy-200:           #9DA2A6;
+  --navy-300:           #717980; /* Alt gray text */
+  --navy-400:           #555D64;
+  --navy-500:           #2A343D; /* Navy Blue */
+  --navy-600:           #262F38;
+  --navy-700:           #1E252B;
+  --navy-800:           #171D22; /* Deep navy — used for text */
+  --navy-900:           #12161A;
+
+  /* ── SEVERITY / SEMANTIC ───────────────────────────── */
+  --color-success:      #2E8120;
+  --color-success-bg:   var(--green-50);
+  --color-success-text: var(--green-600);
+  --color-info:         var(--blue-500);
+  --color-info-bg:      var(--blue-100);
+  --color-info-text:    var(--blue-800);
+  --color-warning:      #FFCD32;
+  --color-warning-bg:   var(--yellow-100);
+  --color-warning-text: var(--yellow-900);
+  --color-error:        #EF4444;
+  --color-error-bg:     var(--red-50);
+  --color-error-text:   var(--red-600);
+
+  /* ── TEXT ───────────────────────────────────────────── */
+  --text-primary:       #495057; /* PrimeReact text color */
+  --text-secondary:     #64748B; /* Alt gray */
+  --text-muted:         #8E98A8; /* Navy 300 */
+  --text-placeholder:   var(--gray-200);
+  --text-on-dark:       #FFFFFF;
+  --text-link:          var(--dk-teal);
+  --text-link-hover:    var(--teal);
+
+  /* ── BACKGROUNDS ───────────────────────────────────── */
+  --bg-root:            var(--surface-100);
+  --bg-surface:         #FFFFFF;
+  --bg-muted:           var(--surface-300);
+  --bg-hover:           #E9ECEF;
+  --bg-table-row:       #F9F9FA;
+  --bg-table-border:    #CED4DA;
+
+  /* ── BORDERS ───────────────────────────────────────── */
+  --border-default:     #CED4DA;
+  --border-light:       #EAEBEC;
+  --border-input:       #CED4DA;
+  --border-input-focus: var(--aqua);
+  --border-error:       #E55557;
+
+  /* ── SHADOWS / ELEVATION ────────────────────────────── */
+  --shadow-depth-1: 0px 3px 10px 2px rgb(234,235,236);
+  --shadow-depth-2: 0px 4px 6px -1px rgba(0,0,0,0.1), 0px 2px 4px -2px rgba(0,0,0,0.1);
+  --shadow-depth-3: 0px 10px 10px -5px rgba(0,0,0,0.04), 0px 20px 25px -5px rgba(0,0,0,0.1);
+  --shadow-depth-4: 0px 25px 50px -12px rgba(0,0,0,0.25);
+  --shadow-focus: 0px 0px 0px 2.8px rgba(50,164,172,0.2);
+  --scrim: rgba(42,52,61,0.25);
+  /* Legacy aliases */
+  --shadow-1: var(--shadow-depth-1);
+  --shadow-2: var(--shadow-depth-2);
+
+  /* ── RADII ─────────────────────────────────────────── */
+  --radius-sm:   4px;
+  --radius-md:   6px;
+  --radius-lg:   10px;
+  --radius-xl:   12px;
+  --radius-2xl:  20px;
+  --radius-3xl:  24px;
+  --radius-full: 9999px;
+
+  /* ── TYPOGRAPHY ─────────────────────────────────────── */
+  --font-primary:    'Open Sans', sans-serif;
+  --font-display:    'Noto Sans', 'Open Sans', sans-serif;
+  --font-icons:      'primeicons';
+  --rem-base:        16px;
+
+  /* Size scale (Open Sans — from PoC Typography page) */
+  --text-xs:    10px;    /* Small */
+  --text-sm:    12px;    /* Normal */
+  --text-base:  14px;    /* Large */
+  --text-lg:    18px;    /* XL */
+  --text-xl:    20px;    /* H4 */
+  --text-2xl:   32px;    /* H3 */
+  --text-3xl:   38px;    /* H2 */
+  --text-4xl:   48px;    /* H1 */
+
+  /* ── SPACING TOKENS ────────────────────────────────── */
+  --spacing-02:  2px;
+  --spacing-04:  4px;
+  --spacing-08:  8px;
+  --spacing-12:  12px;
+  --spacing-16:  16px;
+  --spacing-20:  20px;
+  --spacing-24:  24px;
+  --spacing-28:  28px;
+  --spacing-32:  32px;
+  --spacing-44:  44px;
+  --spacing-56:  56px;
+
+  --leading-tight:   1.2;
+  --leading-normal:  1.5;
+  --leading-body:    1.7;
+
+  /* ── BREAKPOINTS ───────────────────────────────────── */
+  --bp-mobile:     414px;
+  --bp-tablet:     768px;
+  --bp-sm-desktop: 1024px;
+  --bp-lg-desktop: 1280px;
+  --bp-xl-desktop: 1440px;
+}
+
+/* ── BASE TYPE PRESETS ──────────────────────────────── */
+.type-h1 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: var(--text-4xl); /* 48px */
+  line-height: auto;
+  color: var(--gray-900);
+}
+.type-h2 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: var(--text-3xl); /* 38px */
+  line-height: auto;
+  color: var(--gray-900);
+}
+.type-h3 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: var(--text-2xl); /* 32px */
+  line-height: auto;
+  color: var(--gray-900);
+}
+.type-h4 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: var(--text-xl); /* 20px */
+  line-height: auto;
+  color: var(--text-primary);
+}
+.type-h5 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: var(--text-sm); /* 12px */
+  line-height: auto;
+  color: var(--text-primary);
+}
+.type-h6 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: var(--text-xs); /* 10px */
+  line-height: auto;
+  color: var(--text-primary);
+}
+.type-body {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  color: var(--text-primary);
+}
+.type-body-sm {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  color: var(--text-primary);
+}
+.type-caption {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: var(--text-xs);
+  line-height: var(--leading-normal);
+  color: var(--text-secondary);
+}
+.type-label {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  line-height: 17px;
+  color: var(--text-primary);
+}
