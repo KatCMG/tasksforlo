@@ -288,18 +288,34 @@ function SDRStep2({ selectedDocs, sending }) {
 
         <span style={{ fontWeight: 600, color: '#171D22', paddingTop: 6 }}>To</span>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, alignItems: 'center', padding: '4px 0' }}>
-          {['jack.smith@email.com', 'jana.smith@email.com'].map((e, i) => (
+          {[
+            { email: 'jsmith@email.com', name: 'Jack Smith', invited: true },
+            { email: 'janesmith@email.com', name: 'Jane Smith', invited: true },
+            { email: 'bjohnson@email.com', name: 'Bob Johnson', invited: false },
+          ].map((r, i) => (
             <span key={i} style={{
               display: 'inline-flex', alignItems: 'center', gap: 4,
-              padding: '2px 6px 2px 8px', background: '#EAF6F7',
-              border: '1px solid #D1EDEF', borderRadius: 20,
-              fontSize: 10, fontWeight: 600, color: '#047880',
+              padding: '2px 6px 2px 8px',
+              background: r.invited ? '#EAF6F7' : '#FFF9D6',
+              border: `1px solid ${r.invited ? '#D1EDEF' : '#E6C800'}`,
+              borderRadius: 20,
+              fontSize: 10, fontWeight: 600,
+              color: r.invited ? '#047880' : '#8A6D00',
             }}>
-              {e}
+              {r.email} ({r.name})
+              {!r.invited && <span style={{ fontWeight: 700 }}>&middot; Not invited</span>}
               <i className="pi pi-times" style={{ fontSize: 7, cursor: 'pointer' }} />
             </span>
           ))}
           <span style={{ color: '#047880', cursor: 'pointer', fontSize: 12, fontWeight: 700 }}>+</span>
+        </div>
+        <span></span>
+        <div style={{
+          margin: '4px 0 2px', padding: '10px 12px',
+          background: '#FFF9D6', border: '1px solid #E6C800',
+          borderRadius: 6, fontSize: 11, color: '#5C4A00', lineHeight: '17px',
+        }}>
+          Bob Johnson has not been invited to the portal. Use <strong>Invite Borrower</strong> in the header first. Only document upload tasks will be sent to them.
         </div>
 
         <span style={{ fontWeight: 600, color: '#171D22', paddingTop: 6 }}>CC</span>
